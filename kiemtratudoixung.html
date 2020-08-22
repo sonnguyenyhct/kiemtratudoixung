@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+    <script>
+        let checkSymmetry = prompt("Nhập vào từ muốn kiểm tra :");
+        if (isPalindrome(checkSymmetry)){
+            alert(checkSymmetry + " là 1 từ đối xứng");
+        }else {
+            alert(checkSymmetry + " là 1 từ không đối xứng");
+        }
+        function isPalindrome(s){
+                if (s.length === 0 || s.length === 1){
+                    return true;
+                }else if (s[0] === s[s.length-1]){
+                    s = s.slice(0,1);
+                    s = s.slice(s.length - 1,1);
+                    return isPalindrome(s);
+                }else {
+                    return false;
+                }
+        }
+    </script>
+</body>
+</html>
